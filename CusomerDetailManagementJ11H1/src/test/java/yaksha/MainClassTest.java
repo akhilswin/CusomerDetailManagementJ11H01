@@ -4,10 +4,8 @@ import static yaksha.TestUtils.businessTestFile;
 import static yaksha.TestUtils.currentTest;
 import static yaksha.TestUtils.yakshaAssert;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
@@ -40,10 +38,7 @@ class MainClassTest {
 
 		resulList2.add("New York=1");
 		resulList2.add("Texas=2");
-
 		Map<String, Integer> tm = CustomerDetailManagement.convertCsvToMap(csvList);
-		Set tm1 = tm.entrySet();
-
 		for (Map.Entry<String, Integer> tm2 : tm.entrySet()) {
 			resulList1.add(tm2.getKey() + "=" + tm2.getValue());
 		}
